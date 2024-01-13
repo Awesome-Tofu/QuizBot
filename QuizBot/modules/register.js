@@ -27,6 +27,7 @@ module.exports = async function register(msg, number){
         await uploadDistrict(number, user.district);
         await uploadPayed(number, false);
         await msg.reply("You have been registered. You can now go ahead and pay in next message.");
+        user = {}; 
         return;
     }
 }
