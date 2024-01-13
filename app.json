@@ -1,0 +1,41 @@
+{
+    "name": "miko-bot",
+    "description": "Miko bot whatsapp automated program",
+    "repository": "https://github.com/Awesome-Tofu/miko-bot",
+    "logo": "https://miro.medium.com/v2/resize:fit:698/1*0jjdu52m0MO4SjLWiCVOlg.jpeg",
+    "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device", "whatsapp-web.js"],
+    "env": {
+    "PUPPETEER_EXECUTABLE_PATH": {
+      "description": "Leave it as default",
+      "value": "/app/.apt/usr/bin/google-chrome",
+      "required": true
+    },
+    "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD": {
+      "description": "Leave it as default",
+      "value": "true",
+      "required": true
+    },
+    "MONGODB_URI":{
+      "description": "Add your mongoDB URI",
+      "value": "mongodb+srv://gojo:gojo@cluster0.vx6fdn0.mongodb.net/?retryWrites=true&w=majority",
+      "required":true
+    }
+     },    
+    "buildpacks": [
+      {
+        "url": "heroku/nodejs"
+      },
+      {
+        "url": "https://github.com/heroku/heroku-buildpack-google-chrome.git"
+      },
+      {
+         "url": "https://github.com/jontewks/puppeteer-heroku-buildpack.git"
+      }
+    ],
+     "formation": {
+         "web": {
+             "quantity": 1,
+             "size": "standard-1X"
+         }
+      }
+  }

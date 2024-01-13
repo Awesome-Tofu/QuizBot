@@ -1,0 +1,25 @@
+{
+  "name": "quizbot",
+  "version": "1.0.0",
+  "description": "Whatsapp automated quiz bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "WHatsapp",
+    "QuizBot",
+    "Puppeteer",
+    "Whatsapp-web.js"
+  ],
+  "author": "Tofu",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "mongodb": "^6.3.0",
+    "puppeteer": "^21.7.0",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.23.0"
+  }
+}
