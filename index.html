@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,8 @@
             animation: gradientAnimation 10s infinite;
         }
 
-        h1, p {
+        h1,
+        p {
             color: #fff;
             text-align: center;
             z-index: 2;
@@ -50,7 +52,8 @@
 
         .github-pfp {
             position: absolute;
-            width: 100px; /* Adjust the size as needed */
+            width: 100px;
+            /* Adjust the size as needed */
             height: 100px;
             border-radius: 50%;
             top: 50%;
@@ -63,6 +66,7 @@
             0% {
                 background-position: 0% 50%;
             }
+
             100% {
                 background-position: 100% 50%;
             }
@@ -101,28 +105,34 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 
-<script>
-    // Reload the page every 5 seconds if the QR code is present
-    function checkForQRCode() {
-        const qrCodeContainer = document.querySelector('.qr-code');
-        
-        if (qrCodeContainer && qrCodeContainer.innerHTML.trim() !== "") {
-            location.reload();
+    <script>
+        // Reload the page every 5 seconds if the QR code is present
+        function checkForQRCode() {
+            const qrCodeContainer = document.querySelector('.qr-code');
+
+            if (qrCodeContainer && qrCodeContainer.innerHTML.trim() !== "") {
+                location.reload();
+            }
         }
-    }
 
-    // Check for the QR code initially
-    checkForQRCode();
+        // Check for the QR code initially
+        checkForQRCode();
 
-    // Reload the page every 5 seconds
-    setInterval(checkForQRCode, 5000);
-</script>
+        // Reload the page every 5 seconds
+        setInterval(checkForQRCode, 5000);
+    </script>
 </head>
+
 <body>
     <h1>QR Code to Scan WhatsApp</h1>
     <div class="qr-code-container">
@@ -130,16 +140,17 @@
         <!-- pfp -->
 
         <!-- QR Code -->
-      <div class="qr-code">
-          <div class="loading-animation"></div>
-      </div>
+        <div class="qr-code">
+            <div class="loading-animation"></div>
+        </div>
     </div>
     <p>Please wait Qr code is being generated</p>
-    
+
     <!-- Buttons Container -->
     <div class="buttons-container">
         <a class="github-button" href="https://github.com/Awesome-Tofu/miko-bot" target="_blank">GitHub Repo</a>
         <!-- Add more buttons if needed -->
     </div>
 </body>
+
 </html>
