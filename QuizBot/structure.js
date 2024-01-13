@@ -16,7 +16,7 @@ module.exports = async function structure(client, msg) {
     } else if (!isInDatabase) {
         await register(msg, number);
     } else if(isInDatabase && !isPaid){
-        await msg.reply("Thanks for registering.\nYou can pay the amount of Rs.X here:\n"+ `https://pay-site.vercel.com/${number}`);
+        await msg.reply("Thanks for registering.\nYou can pay the amount of Rs.X here:\n"+ `https://pay-site.vercel.app/${number}`);
         return;
     }else {
         await msg.reply(startMsg);
