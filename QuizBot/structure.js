@@ -1,5 +1,8 @@
 const { isUserPaid, isUserInDatabase } = require('./database.js');
 const register = require('./modules/register.js');
+const quiz = require('./modules/quiz.js');
+
+const users = new Map();
 
 module.exports = async function structure(client, msg) {
     const quotedMsg = await msg.getQuotedMessage();
@@ -9,10 +12,22 @@ module.exports = async function structure(client, msg) {
     const isInDatabase = await isUserInDatabase(msg);
     const isPaid = await isUserPaid(msg);
 
-    if (quotedMsg && quotedMsg.body === startMsg && msg.body === "1") {
-        await msg.reply("Social Affairs Quiz Started")
-    } else if (quotedMsg && quotedMsg.body === startMsg && msg.body === "2") {
+    let user = users.get(number);
+    if (!user) {
+        user = {};
+        users.set(number, user);
+    }
+
+    if (isPaid && ((quotedMsg && quotedMsg.body === startMsg && msg.body === "1") || msg.body == '1')) {
+        await msg.reply("Social Affairs Quiz Started");
+        await msg.reply("no questions available")
+    } else if (isPaid && ((quotedMsg && quotedMsg.body === startMsg && msg.body === "2") || msg.body == '2')) {
         await msg.reply("Quiz Started")
+        await quiz(user, msg);
+        // isQuiz = false;
+    } else if (user.question) {
+        // Handle the user's answer to the quiz question
+        await quiz(user, msg);
     } else if (!isInDatabase) {
         await register(msg, number);
     } else if (isInDatabase && !isPaid) {

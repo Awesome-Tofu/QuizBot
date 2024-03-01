@@ -1,0 +1,102 @@
+[
+  {
+    "q": "What color is the sky?",
+    "options": {
+      "a": "Blue",
+      "b": "Red",
+      "c": "Green",
+      "d": "Yellow"
+    },
+    "correct": "a"
+  },
+  {
+    "q": "Which animal says 'meow'?",
+    "options": {
+      "a": "Dog",
+      "b": "Cat",
+      "c": "Cow",
+      "d": "Duck"
+    },
+    "correct": "b"
+  },
+  {
+    "q": "What do we use to eat soup?",
+    "options": {
+      "a": "Fork",
+      "b": "Chopsticks",
+      "c": "Spoon",
+      "d": "Knife"
+    },
+    "correct": "c"
+  },
+  {
+    "q": "How many legs does a dog have?",
+    "options": {
+      "a": "2",
+      "b": "4",
+      "c": "6",
+      "d": "8"
+    },
+    "correct": "b"
+  },
+  {
+    "q": "What do we wear on our feet?",
+    "options": {
+      "a": "Hat",
+      "b": "Gloves",
+      "c": "Socks",
+      "d": "Scarf"
+    },
+    "correct": "c"
+  },
+  {
+    "q": "Which month comes after December?",
+    "options": {
+      "a": "November",
+      "b": "January",
+      "c": "October",
+      "d": "March"
+    },
+    "correct": "b"
+  },
+  {
+    "q": "What shape is a ball?",
+    "options": {
+      "a": "Square",
+      "b": "Triangle",
+      "c": "Circle",
+      "d": "Rectangle"
+    },
+    "correct": "c"
+  },
+  {
+    "q": "What do we use to brush our teeth?",
+    "options": {
+      "a": "Spoon",
+      "b": "Fork",
+      "c": "Toothbrush",
+      "d": "Chopsticks"
+    },
+    "correct": "c"
+  },
+  {
+    "q": "What do we sleep on at night?",
+    "options": {
+      "a": "Chair",
+      "b": "Table",
+      "c": "Bed",
+      "d": "Couch"
+    },
+    "correct": "c"
+  },
+  {
+    "q": "What do we use to write?",
+    "options": {
+      "a": "Pencil",
+      "b": "Eraser",
+      "c": "Ruler",
+      "d": "Calculator"
+    },
+    "correct": "a"
+  }
+]
