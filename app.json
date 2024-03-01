@@ -17,7 +17,7 @@
     },
     "MONGODB_URI":{
       "description": "Add your mongoDB URI",
-      "value": "mongodb+srv://gojo:gojo@cluster0.vx6fdn0.mongodb.net/?retryWrites=true&w=majority",
+      "value": "mongodb+srv://kazuha321:kazuha321@cluster0.oafdfob.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
       "required":true
     }
      },    
