@@ -8,7 +8,6 @@ require("dotenv").config();
 const express = require('express');
 const app = express();
 const fs = require('fs');
-const path = require('path');
 const qrimage = require('qr-image');
 //modules import
 const structure = require('./QuizBot/structure')

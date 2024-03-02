@@ -48,4 +48,30 @@ async function isUserInDatabase(msg) {
     }
 }
 
-module.exports = { uploadNumber, uploadName, uploadDOB, uploadDistrict, uploadPayed, isUserPaid, isUserInDatabase };
+async function updateUserScore(number, score, totalAskedQuestions) {
+    await User.updateOne(
+        { number },
+        {
+            $inc: {
+                score: score,
+                totalAskedQuestions: totalAskedQuestions
+            }
+        },
+        { upsert: true }
+    );
+}
+
+
+async function getUserScore(number) {
+    const user = await User.findOne({ number });
+
+    if (user) {
+        // If user is found, return the user's score and totalAskedQuestions
+        return { score: user.score || 0, totalAskedQuestions: user.totalAskedQuestions || 0 };
+    } else {
+        // If the user is not found, return 0 for score and totalAskedQuestions
+        return { score: 0, totalAskedQuestions: 0 };
+    }
+}
+
+module.exports = { uploadNumber, uploadName, uploadDOB, uploadDistrict, uploadPayed, isUserPaid, isUserInDatabase, updateUserScore, getUserScore};
